@@ -1,3 +1,3 @@
 <?php
 
-header('location: ./site/layout.php');
+header('location: ./site/trang-chinh/index.php');
