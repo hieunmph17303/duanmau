@@ -77,6 +77,8 @@ function check_login()
             return;
         }
     }
-    $_SESSION['request_uri'] = $_SERVER['REQUEST_URI'];
+
+    $_SESSION['name_page'] = 'trang_chu';
     header("location: $SITE_URL/tai-khoan/dang-nhap.php");
+    die;
 }

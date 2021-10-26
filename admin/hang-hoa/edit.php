@@ -28,11 +28,11 @@ if (is_file($img_path)) {
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-6">
-                            <label for="don_gia" class="form-label">Đơn giá</label>
+                            <label for="don_gia" class="form-label">Đơn giá (vnđ)</label>
                             <input type="text" name="don_gia" id="don_gia" class="form-control" value="<?= $don_gia ?>">
                         </div>
                         <div class="form-group col-sm-6">
-                            <label for="giam_gia" class="form-label">Giảm giá</label>
+                            <label for="giam_gia" class="form-label">Giảm giá (vnđ)</label>
                             <input type="text" name="giam_gia" id="giam_gia" class="form-control" required
                                 value="<?= $giam_gia ?>">
                         </div>

@@ -26,7 +26,7 @@ if (exist_param("btn_list")) {
 
     // $hinh = $_FILES['hinh']['name'];
     // Upload file lên host
-    $hinh = save_file('hinh', $UPLOAD_URL);
+    $hinh = save_file('hinh', "$UPLOAD_URL/products/");
     //insert vào db
     hang_hoa_insert($ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta);
 

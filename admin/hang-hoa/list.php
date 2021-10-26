@@ -54,9 +54,13 @@
                         $xoahh = "index.php?btn_delete&ma_hh=" . $ma_hh;
                         $img_path = $UPLOAD_URL . '/products/' . $hinh;
                         if (is_file($img_path)) {
-                            $img = "<img src='$img_path' height='60' width='60' class='object-fit-cover'>";
+                            $img = "<img src='$img_path' height='60' width='60' class='object-fit-contain'>";
                         } else {
                             $img = "no photo";
+                        }
+                        //Tính giảm bn %
+                        if ($don_gia > 0) {
+                            $percent_discount = number_format($giam_gia / $don_gia * 100);
                         }
                     ?>
                     <tr>
@@ -65,7 +69,8 @@
                         <td><?= $ten_hh ?></td>
                         <td><?= $img ?></td>
                         <td><?= number_format($don_gia, 0) ?></td>
-                        <td><?= number_format($giam_gia * 100) ?></td>
+                        <td><?= number_format($giam_gia, 0) ?> <i class="text-danger">(<?= $percent_discount ?>%)</i>
+                        </td>
                         <td><?= $so_luot_xem ?></td>
                         <td><?= $ngay_nhap ?></td>
                         <td><?= ($dac_biet == 1) ? "Đặc biệt" : "Không"; ?></td>
@@ -73,9 +78,8 @@
                         <td class="text-end">
                             <a href="<?= $suahh ?>" class="btn btn-outline-info btn-rounded"><i
                                     class="fas fa-pen"></i></a>
-                            <a href="index.php?btn_delete&ma_bl=<?= $ma_bl ?>&ma_hh=<?= $ma_hh ?>"
-                                class="btn btn-outline-danger btn-rounded" onclick="return checkDelete()"><i
-                                    class="fas fa-trash"></i></a>
+                            <a href="<?= $xoahh ?>" class="btn btn-outline-danger btn-rounded"
+                                onclick="return checkDelete()"><i class="fas fa-trash"></i></a>
                         </td>
                     </tr>
                     <?php
