@@ -47,18 +47,20 @@
                              alt="Ảnh sản phẩm">
                          <div class="card-body">
                              <h4 class="card-title mh-60">
-                                 <a href="" title="Xem chi tiết"><?= $ten_hh ?></a>
+                                 <a href="<?= $SITE_URL . '/hang-hoa/chi-tiet.php?ma_hh=' . $ma_hh ?>">
+                                     <?= $ten_hh ?>
+                                 </a>
                              </h4>
                              <i><?= $giam_gia == 0 ? '' : '-' . $percent_discount . '%' ?></i>
-                             <div class="">
+                             <div class="product-price">
                                  <div class="col d-flex justify-content-center align-items-center">
                                      <del class="d-block"><?= number_format($don_gia, 0, ',') ?>đ</del>
-                                     <p class="text-danger btn font-weight-bold d-block m-0">
+                                     <p class="text-danger font-weight-bold d-block ml-3 mb-0">
                                          <?= number_format($don_gia - $giam_gia, 0, ',') ?>đ</p>
                                  </div>
-                                 <div class="col m-2">
-                                     <a href="#" class="btn btn-danger btn-block">Add to cart</a>
-                                 </div>
+                             </div>
+                             <div class="col m-2">
+                                 <a href="#" class="btn btn-danger btn-block">Add to cart</a>
                              </div>
                          </div>
                      </div>

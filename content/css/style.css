@@ -112,6 +112,7 @@ a {
     height: 48px;
     line-height: 48px;
     font-size: 20px;
+    overflow: hidden;
 }
 .input-custom {
     padding: 8px !important;

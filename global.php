@@ -9,10 +9,8 @@ $ADMIN_URL = "$ROOT_URL/admin";
 $SITE_URL = "$ROOT_URL/site";
 $SL_PER_PAGE = 10;
 
-/**
- * Định nghĩa đường dẫn chứa ảnh trong upload
- */
-// $IMAGE_DIR = $_SERVER["DOCUMENT_ROOT"] . "$ROOT_URL/content/images";
+//Định nghĩa đường dẫn chứa ảnh trong upload
+
 $UPLOAD_URL = "../../uploaded";
 
 /**

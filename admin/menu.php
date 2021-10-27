@@ -1,12 +1,12 @@
 <nav id="sidebar">
     <div class="sidebar-header">
-        <a href="index.html">
+        <a href="<?= $SITE_URL ?>/trang-chinh/">
             <img src="<?= $CONTENT_URL ?>/images/logo.png" alt="logo" class="img-fluid logo">
         </a>
     </div>
     <ul class="list-unstyled components text-secondary">
         <li>
-            <a href="index.html"><i class="fas fa-store"></i>Xem trang web</a>
+            <a href="<?= $SITE_URL ?>/trang-chinh/"><i class="fas fa-store"></i>Xem trang web</a>
         </li>
         <li>
             <a href="<?= $ADMIN_URL ?>/trang-chinh/"><i class="fas fa-home"></i>Trang chủ</a>

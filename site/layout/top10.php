@@ -11,7 +11,8 @@
         <ul class="list-group category_block">
             <?php foreach ($hh_top10 as $hh) : ?>
             <li class="list-group-item px-2 py-3">
-                <a class="d-flex align-items-center" href="">
+                <a class="d-flex align-items-center"
+                    href="<?= $SITE_URL . '/hang-hoa/chi-tiet.php?ma_hh=' . $hh['ma_hh'] ?>">
                     <div class="">
                         <img class="img-fluid img-list" src="<?= $UPLOAD_URL . '/products/' . $hh['hinh'] ?>" alt="">
                     </div>

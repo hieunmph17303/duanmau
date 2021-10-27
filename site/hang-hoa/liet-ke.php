@@ -5,7 +5,6 @@ require '../../dao/loai.php';
 //-------------------------------//
 
 
-
 extract($_REQUEST);
 
 if (exist_param("ma_loai")) {
