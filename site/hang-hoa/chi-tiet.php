@@ -19,7 +19,7 @@ $hh_cung_loai = hang_hoa_select_by_loai($ma_loai);
 if (exist_param("noi_dung")) {
     $ma_kh = $_SESSION['user']['ma_kh'];
     $ngay_bl = date_format(date_create(), 'Y-m-d');
-    binh_luan_insert($ma_kh, $ma_hh, $noi_dung, $ngay_bl);
+    binh_luan_insert($ma_kh, $ma_hh, $noi_dung, $ngay_bl, $rating);
 }
 // Lấy list bình luận ra
 $binh_luan_list = binh_luan_select_by_hang_hoa($ma_hh);

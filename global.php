@@ -71,7 +71,7 @@ function check_login()
         if ($_SESSION['user']['vai_tro'] == 1) {
             return;
         }
-        if (strpos($_SESSION['REQUEST_URI'], '/admin/') === false) {
+        if (strpos($_SERVER['REQUEST_URI'], '/admin/') == false) {
             return;
         }
     }

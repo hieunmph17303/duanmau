@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark">
+<nav class="navbar navbar-md navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="<?= $SITE_URL ?>/trang-chinh/index.php">
             <img class="img-fluid logo" src="<?= $CONTENT_URL ?>/images/logo.png" alt="logo">
