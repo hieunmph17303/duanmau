@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-header text-center bg-dark text-white text-uppercase">Thêm danh mục</div>
             <div class="card-body">
-                <form action="index.php" method="POST">
+                <form action="index.php" method="POST" id="add_loai">
                     <div class="mb-3">
                         <label for="ma_loai" class="form-label">Mã loại</label>
                         <input type="text" name="ma_loai" class="form-control" disabled>

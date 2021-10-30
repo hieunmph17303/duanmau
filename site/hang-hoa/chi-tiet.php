@@ -22,7 +22,7 @@ if (exist_param("noi_dung")) {
     binh_luan_insert($ma_kh, $ma_hh, $noi_dung, $ngay_bl, $rating);
 }
 // Lấy list bình luận ra
-$binh_luan_list = binh_luan_select_by_hang_hoa($ma_hh);
+$binh_luan_list = binh_luan_select_by_hang_hoa($ma_hh, 5);
 
 $VIEW_NAME = "hang-hoa/chi-tiet-ui.php";
 require '../layout.php';

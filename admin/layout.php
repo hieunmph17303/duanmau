@@ -77,12 +77,10 @@ check_login();
 
             <!-- end of navbar navigation -->
             <div class="content">
-                <div class="container">
+                <!-- -===========================home ===================-->
 
-                    <!-- -===========================home ===================-->
+                <?php include $VIEW_NAME; ?>
 
-                    <?php include $VIEW_NAME; ?>
-                </div>
             </div>
         </div>
     </div>
@@ -92,7 +90,10 @@ check_login();
     <!-- Js -->
     <script src="<?= $CONTENT_URL ?>/js/jquery-3.6.0.min.js"></script>
     <script src="<?= $CONTENT_URL ?>/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $CONTENT_URL ?>/js/jquery.validate.js"></script>
     <script src="<?= $CONTENT_URL ?>/js/main.js"></script>
+    <script src="<?= $CONTENT_URL ?>/js/validation.js"></script>
+
 
     <script>
     // =============Check delete=================//
@@ -126,21 +127,28 @@ check_login();
     });
     </script>
 
-    <!-- Thư viện javascript này được sử dụng để chọn và bỏ chọn các loại trên trang list.php. -->
+    <!--  chọn và bỏ chọn các loại trên trang list.php. -->
     <script>
     $(document).ready(function() {
-        $("#check-all").click(function() {
-            $(":checkbox").prop("checked", true);
+        var checkboxItem = ":checkbox";
+        $("#select-all").click(function() {
+            if (this.checked) {
+                $(checkboxItem).each(function() {
+                    this.checked = true;
+                });
+            } else {
+                $(checkboxItem).each(function() {
+                    this.checked = false;
+                });
+            }
         });
-        $("#clear-all").click(function() {
-            $(":checkbox").prop("checked", false);
-        });
-        $("#btn-delete").click(function() {
+
+        $("#deleteAll").click(function() {
             if ($(":checked").length === 0) {
                 alert("Vui lòng chọn ít nhất một mục!");
                 return false;
             }
-        });
+        })
     });
     </script>
 </body>

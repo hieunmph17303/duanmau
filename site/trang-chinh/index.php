@@ -23,6 +23,8 @@ if (exist_param("gioi-thieu")) {
     //
 } else {
     $_SESSION['name_page'] = 'trang_chu';
+    $items = hang_hoa_select_dac_biet();
+    $top10 = hang_hoa_select_top10();
     $VIEW_NAME = "trang-chinh/trang-chu.php";
 }
 

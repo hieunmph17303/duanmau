@@ -24,12 +24,12 @@
 <body>
     <!-- Page Preloader -->
 
-    <!-- <div id="preloader">
+    <div id="preloader">
         <div class="loader"></div>
-    </div> -->
+    </div>
 
     <!-- Header -->
-    <header class="bg-dark sticky-top">
+    <header class="sticky-top">
         <?php require "../layout/menu.php"; ?>
     </header>
 
@@ -49,7 +49,9 @@
     <script src="<?= $CONTENT_URL ?>/js/bootstrap.min.js"></script>
     <script src="<?= $CONTENT_URL ?>/js/bootstrap.bundle.min.js"></script>
     <script src="<?= $CONTENT_URL ?>/js/slick.min.js"></script>
+    <script src="<?= $CONTENT_URL ?>/js/jquery.validate.js"></script>
     <script src="<?= $CONTENT_URL ?>/js/main.js"></script>
+    <script src="<?= $CONTENT_URL ?>/js/validation.js"></script>
 </body>
 
 </html>

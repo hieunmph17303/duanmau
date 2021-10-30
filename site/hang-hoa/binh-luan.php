@@ -9,10 +9,12 @@
                 <meta itemprop="datePublished" content="01-01-2016"><?= $bl['ngay_bl'] ?>
 
                 <?php for ($i = 1; $i <= $bl['rating']; $i++) {
-                        echo '<span class="fa fa-star"></span>';
+                        echo '<span class="review_rating fa fa-star"></span>';
                     } ?>
 
                 by <b><?= $bl['ho_ten'] ?></b>
+                <img width="40" height="40" class="rounded-circle object-fit-cover"
+                    src="<?= $UPLOAD_URL . "/users/" . $bl['hinh'] ?>" />
                 <p class="blockquote">
                 <p class="mb-0"><?= $bl['noi_dung'] ?></p>
                 </p>
@@ -20,18 +22,16 @@
             </div>
             <?php endforeach ?>
             <nav aria-label="..." class="text-center">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#!" tabindex="-1">Previous</a>
+
+                <ul class="pagination justify-content-center">
+                    <?php for ($i = 1; $i <= $_SESSION['total_page']; $i++) { ?>
+
+                    <li class="page-item <?= $_SESSION['page'] == $i ? 'active' : '' ?>">
+                        <a class="page-link" href="?ma_hh=<?= $ma_hh ?>&page=<?= $i ?>"><?= $i ?></a>
                     </li>
-                    <li class="page-item"><a class="page-link" href="#!">1</a></li>
-                    <li class="page-item active">
-                        <a class="page-link" href="#!">2 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="?page=">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#!">Next</a>
-                    </li>
+
+                    <?php } ?>
+
                 </ul>
             </nav>
 
@@ -39,7 +39,7 @@
         <?php
 
         if (!isset($_SESSION['user'])) {
-            echo '<b class="text-danger">Đăng nhập để bình luận về sản phẩm này</b>';
+            echo '<h5 class="text-center"><i class="text-danger">Đăng nhập để bình luận về sản phẩm này</i></h5>';
         } else {
 
         ?>

@@ -10,7 +10,9 @@ $VIEW_NAME = "tai-khoan/dang-ky-form.php";
 extract($_REQUEST);
 
 if (exist_param("btn_register")) {
-    if (khach_hang_exist($ma_kh)) {
+    if ($mat_khat != $mat_khau2) {
+        $MESSAGE = "Mật khẩu phải trùng nhau";
+    } elseif (khach_hang_exist($ma_kh)) {
         $MESSAGE = "Tên đăng nhập đã tồn tại";
     } else {
 

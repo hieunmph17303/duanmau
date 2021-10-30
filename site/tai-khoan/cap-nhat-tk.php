@@ -3,6 +3,7 @@ require '../../global.php';
 require '../../dao/khach-hang.php';
 
 
+check_login();
 
 extract($_REQUEST);
 

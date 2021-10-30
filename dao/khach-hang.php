@@ -23,7 +23,7 @@ function khach_hang_delete($ma_kh)
 }
 function khach_hang_select_all()
 {
-    $sql = "SELECT * FROM khach_hang ORDER BY id DESC";
+    $sql = "SELECT * FROM khach_hang";
     return pdo_query($sql);
 }
 function khach_hang_select_by_id($ma_kh)
@@ -36,6 +36,13 @@ function khach_hang_exist($ma_kh)
     $sql = "SELECT count(*) FROM khach_hang WHERE ma_kh=?";
     return pdo_query_value($sql, $ma_kh) > 0;
 }
+
+function khach_hang_exist_email($email)
+{
+    $sql = "SELECT count(*) FROM khach_hang WHERE email=?";
+    return pdo_query_value($sql, $email) > 0;
+}
+
 function khach_hang_change_password($ma_kh, $mat_khau_moi)
 {
 

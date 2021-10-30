@@ -1,7 +1,7 @@
 <?php
 require '../../global.php';
 require '../../dao/khach-hang.php';
-
+check_login();
 extract($_REQUEST);
 if (exist_param('btn_change')) {
     if ($mat_khau2 != $mat_khau3) {

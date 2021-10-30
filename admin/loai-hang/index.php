@@ -2,6 +2,7 @@
 require_once "../../dao/pdo.php";
 require_once "../../dao/loai.php";
 require "../../global.php";
+check_login();
 
 
 // chech_login();
@@ -36,6 +37,16 @@ if (exist_param("btn_list")) {
     loai_delete($ma_loai);
     //hiển thị danh sách
 
+    $items = loai_select_all();
+    $VIEW_NAME = "list.php";
+} else if (exist_param("btn_delete_all")) {
+    try {
+        $arr_ma_loai = $_POST['ma_loai'];
+        loai_delete($arr_ma_loai);
+        $MESSAGE = "Xóa thành công!";
+    } catch (Exception $exc) {
+        $MESSAGE = "Xóa thất bại!";
+    }
     $items = loai_select_all();
     $VIEW_NAME = "list.php";
 } else if (exist_param("btn_update")) {

@@ -1,5 +1,5 @@
 <div class="card mt-3">
-    <div class="card-header bg-success text-white text-uppercase" role="tab" id="headingTwo">
+    <div class="card-header bg-primary text-white text-uppercase" role="tab" id="headingTwo">
         <h6 class="mb-0">
             <a class="text-white d-block collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false"
                 aria-controls="collapseTwo">

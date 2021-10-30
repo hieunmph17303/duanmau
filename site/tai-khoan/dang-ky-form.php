@@ -6,7 +6,8 @@
          </header>
 
          <!-- FORM -->
-         <form action="<?= $SITE_URL ?>/tai-khoan/dang-ky.php" method="post" enctype="multipart/form-data">
+         <form action="<?= $SITE_URL ?>/tai-khoan/dang-ky.php" method="post" enctype="multipart/form-data"
+             id="form_dang_ki">
              <div class="form-row">
                  <div class="col form-group">
                      <label>Họ và tên</label>
@@ -34,7 +35,7 @@
              <div class="form-row">
                  <div class="form-group col-md-6">
                      <label>Tạo mật khẩu</label>
-                     <input class="form-control" type="password" name="mat_khau">
+                     <input class="form-control" type="password" name="mat_khau" id="mat_khau">
                  </div> <!-- form-group end.// -->
                  <div class="form-group col-md-6">
                      <label>Nhập lại mật khẩu</label>
@@ -47,6 +48,9 @@
              </div> <!-- form-group// -->
              <input type="hidden" name="kich_hoat" value="1">
              <input type="hidden" name="vai_tro" value="0">
+
+             <i class=" text-danger"><?= (isset($MESSAGE) && (strlen($MESSAGE) > 0)) ? $MESSAGE : "" ?></i>
+
          </form>
          <hr>
          <p class="text-center">Đã có tài khoản? <a href="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php">Đăng nhập</a></p>

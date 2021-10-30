@@ -3,7 +3,7 @@
     <div class="card-body">
         <h4 class="card-title mb-4">Đăng nhập</h4>
 
-        <form action="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php" method="POST">
+        <form action="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php" method="POST" id="form_login">
             <a href="#" class="btn btn-facebook btn-block mb-2"> <i class="fab fa-facebook-f"></i> &nbsp Đăng
                 nhập bằng facebook</a>
             <a href="#" class="btn btn-google btn-block mb-4"> <i class="fab fa-google"></i> &nbsp Đăng nhập
@@ -28,6 +28,7 @@
                     <div class="custom-control-label"> Ghi nhớ tài khoản </div>
                 </label>
             </div> <!-- form-group form-check .// -->
+
             <div class="form-group">
                 <button type="submit" name="btn_login" class="btn btn-primary btn-block"> Đăng nhập </button>
             </div> <!-- form-group// -->

@@ -1,5 +1,11 @@
 /* =================================== */
-
+.error {
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+    color: red;
+    font-style: italic;
+    font-size: 14px;
+}
 .object-fit-cover {
     object-fit: cover;
 }

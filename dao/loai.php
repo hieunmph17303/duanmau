@@ -21,9 +21,11 @@ function loai_delete($ma_loai)
         pdo_execute($sql, $ma_loai);
     }
 }
-function loai_select_all()
+//Mặc định sắp xếp ngược/ truyền ASC vào thì xuôi
+
+function loai_select_all($order = 'DESC')
 {
-    $sql = "SELECT * FROM loai ORDER BY ma_loai DESC";
+    $sql = "SELECT * FROM loai ORDER BY ma_loai $order";
     return pdo_query($sql);
 }
 function loai_select_by_id($ma_loai)
@@ -35,4 +37,15 @@ function loai_exist($ma_loai)
 {
     $sql = "SELECT count(*) FROM loai WHERE ma_loai=?";
     return pdo_query_value($sql, $ma_loai) > 0;
+}
+
+function loai_exist_ten_loai_add($ten_loai)
+{
+    $sql = "SELECT count(*) FROM loai WHERE ten_loai=?";
+    return pdo_query_value($sql, $ten_loai) > 0;
+}
+function loai_exist_ten_loai_update($ma_loai, $ten_loai)
+{
+    $sql = "SELECT count(*) FROM loai WHERE  ma_loai!=? and ten_loai=?";
+    return pdo_query_value($sql, $ma_loai, $ten_loai) > 0;
 }

@@ -2,6 +2,7 @@
 require_once "../../dao/pdo.php";
 require_once "../../dao/khach-hang.php";
 require "../../global.php";
+check_login();
 
 extract($_REQUEST);
 if (exist_param("btn_list")) {
@@ -41,6 +42,16 @@ if (exist_param("btn_list")) {
     khach_hang_delete($ma_kh);
     //hiển thị danh sách
 
+    $items = khach_hang_select_all();
+    $VIEW_NAME = "list.php";
+} else if (exist_param("btn_delete_all")) {
+    try {
+        $arr_ma_kh = $_POST['ma_kh'];
+        khach_hang_delete($arr_ma_kh);
+        $MESSAGE = "Xóa thành công!";
+    } catch (Exception $exc) {
+        $MESSAGE = "Xóa thất bại!";
+    }
     $items = khach_hang_select_all();
     $VIEW_NAME = "list.php";
 } else if (exist_param("btn_update")) {

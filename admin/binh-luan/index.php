@@ -1,4 +1,5 @@
 <?php
+check_login();
 
 require_once "../../dao/pdo.php";
 require_once "../../dao/binh-luan.php";
@@ -15,6 +16,16 @@ if (exist_param("ma_hh")) {
         } catch (Exception $exc) {
             $MESSAGE = "Xóa thất bại";
         }
+    } else if (exist_param("btn_delete_all")) {
+        try {
+            $arr_ma_bl = $_POST['ma_bl'];
+            binh_luan_delete($arr_ma_bl);
+            $MESSAGE = "Xóa thành công!";
+        } catch (Exception $exc) {
+            $MESSAGE = "Xóa thất bại!";
+        }
+        // $items = binh_luan_select_by_hang_hoa($ma_hh);
+        $VIEW_NAME = "detail.php";
     }
 
     $items = binh_luan_select_by_hang_hoa($ma_hh);

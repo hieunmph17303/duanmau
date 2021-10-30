@@ -30,7 +30,7 @@ if (exist_param("ma_loai")) {
     }
 } else {
     $title_site = "Tất cả sản phẩm";
-    $items = hang_hoa_select_all();
+    $items = hang_hoa_select_page('so_luot_xem', 12);
 }
 $hh_db = hang_hoa_select_dac_biet();
 $hh_top10 = hang_hoa_select_top10();

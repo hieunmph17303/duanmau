@@ -19,9 +19,9 @@ if (exist_param("btn_login")) {
             }
             $_SESSION["user"] = $user;
 
-            $ten_vai_tro =  $user['vai_tro'] == 0 ? "khách hàng" : "nhân viên";
+            $ten_vai_tro =  $user['vai_tro'] == 0 ? "" : "nhân viên ";
             echo "<script>
-                     alert('Đăng nhập tài khoản thành công " . $ten_vai_tro . " !'); 
+                     alert('Đăng nhập tài khoản " . $ten_vai_tro . "thành công!'); 
                      location.href='http://localhost:/" . $ROOT_URL . "';
                 </script>";
         } else {

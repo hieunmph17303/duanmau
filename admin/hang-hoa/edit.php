@@ -2,7 +2,7 @@
 
 $img_path = $UPLOAD_URL . '/products/' . $hinh;
 if (is_file($img_path)) {
-    $img = "<img src='$img_path' height='100'>";
+    $img = "<img src='$img_path' height='80'>";
 } else {
     $img = "no photo";
 }
@@ -13,47 +13,9 @@ if (is_file($img_path)) {
         <div class="card">
             <div class="card-header text-center bg-dark text-white text-uppercase">Cập nhật hàng hóa</div>
             <div class="card-body">
-                <form action="index.php?btn_update" method="POST" enctype="multipart/form-data">
+                <form action="index.php?btn_update" method="POST" enctype="multipart/form-data" id="update_hang_hoa">
                     <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="ma_hh" class="form-label">Mã hàng hóa</label>
-                            <input type="text" name="ma_hh" id="ma_hh" readonly class="form-control"
-                                value="<?= $ma_hh ?>">
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label for="ten_hh" class="form-label">Tên hàng hóa</label>
-                            <input type="text" name="ten_hh" id="ten_hh" class="form-control" required
-                                value="<?= $ten_hh ?>">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="don_gia" class="form-label">Đơn giá (vnđ)</label>
-                            <input type="text" name="don_gia" id="don_gia" class="form-control" value="<?= $don_gia ?>">
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label for="giam_gia" class="form-label">Giảm giá (vnđ)</label>
-                            <input type="text" name="giam_gia" id="giam_gia" class="form-control" required
-                                value="<?= $giam_gia ?>">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-sm-6">
-                            <div class="row align-items-center">
-                                <div class="col-sm-8">
-                                    <label for="up_hinh" class="form-label">Ảnh sản phẩm</label>
-                                    <input type="hidden" name="hinh" id="hinh" class="form-control"
-                                        value="<?= $hinh ?>">
-                                    <input type="file" name="up_hinh" id="up_hinh" class="form-control">
-                                </div>
-                                <div class="col-sm-4">
-                                    <!-- Ảnh sản phẩm ban đầu -->
-                                    <?= $img ?>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-sm-4">
                             <label for="ma_loai" class="form-label">Loại hàng</label>
                             <select name="ma_loai" class="form-control" id="ma_loai">
                                 <?php
@@ -72,6 +34,45 @@ if (is_file($img_path)) {
 
                             </select>
                         </div>
+                        <div class="form-group col-sm-4">
+                            <label for="ten_hh" class="form-label">Tên hàng hóa</label>
+                            <input type="text" name="ten_hh" id="ten_hh" class="form-control" required
+                                value="<?= $ten_hh ?>">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="ma_hh" class="form-label">Mã hàng hóa</label>
+                            <input type="text" name="ma_hh" id="ma_hh" readonly class="form-control"
+                                value="<?= $ma_hh ?>">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <div class="row align-items-center">
+                                <div class="col-sm-8">
+                                    <label for="up_hinh" class="form-label">Ảnh sản phẩm</label>
+                                    <input type="hidden" name="hinh" id="hinh" class="form-control"
+                                        value="<?= $hinh ?>">
+                                    <input type="file" name="up_hinh" id="up_hinh" class="form-control">
+                                </div>
+                                <div class="col-sm-4">
+                                    <!-- Ảnh sản phẩm ban đầu -->
+                                    <?= $img ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="don_gia" class="form-label">Đơn giá (vnđ)</label>
+                            <input type="text" name="don_gia" id="don_gia" class="form-control" value="<?= $don_gia ?>">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="giam_gia" class="form-label">Giảm giá (vnđ)</label>
+                            <input type="text" name="giam_gia" id="giam_gia" class="form-control" required
+                                value="<?= $giam_gia ?>">
+                        </div>
+                    </div>
+                    <div class="row">
+
+
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-4">
@@ -89,7 +90,7 @@ if (is_file($img_path)) {
                         </div>
                         <div class="form-group col-sm-4">
                             <label for="ngay_nhap" class="form-label">Ngày nhập</label>
-                            <input type="text" name="ngay_nhap" id="ngay_nhap" class="form-control" required
+                            <input type="date" name="ngay_nhap" id="ngay_nhap" class="form-control" required
                                 value="<?= $ngay_nhap ?>">
                         </div>
                         <div class="form-group col-sm-4">

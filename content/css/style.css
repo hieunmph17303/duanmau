@@ -1,9 +1,44 @@
+.parallax {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed !important;
+    overflow: hidden;
+}
+.primary-color {
+    color: #7332f5 !important;
+}
+.bg-primary {
+    background-color: #7332f5 !important;
+}
+.active > a {
+    color: #fff !important;
+    background-color: #7332f5;
+}
+.text-black {
+    color: #333 !important;
+}
+.error {
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+    color: red;
+    font-style: italic;
+    font-size: 14px;
+}
+header {
+    background-color: #fff;
+    margin: 0;
+    box-shadow: 0 2px 8px #9370db;
+}
 a {
     text-decoration: none !important;
 }
 .img-list {
-    height: 50px;
+    height: 40px;
     width: auto !important;
+}
+.object-fit-cover {
+    object-fit: cover;
 }
 .mh-60 {
     min-height: 60px;
@@ -289,7 +324,11 @@ a.itemside {
 .rating > input {
     display: none;
 }
-
+.review_rating {
+    font-size: 20px;
+    color: #ff0000;
+    cursor: pointer;
+}
 .rating > label {
     position: relative;
     width: 28px;
@@ -338,12 +377,17 @@ a.itemside {
 
 .product-badge {
     position: absolute;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.07em;
     text-transform: uppercase;
 }
-
+.fz-14 {
+    font-size: 14px;
+}
+.fz-20 {
+    font-size: 20px;
+}
 .text-danger {
     color: #ff5252 !important;
 }
@@ -356,8 +400,7 @@ a.itemside {
 
 .product-card .product-title {
     margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: normal;
+    font-size: 18px;
     text-align: center;
 }
 
@@ -409,7 +452,7 @@ a.itemside {
 img,
 figure {
     max-width: 100%;
-    height: auto;
+    /* height: auto; */
     vertical-align: middle;
 }
 

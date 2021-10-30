@@ -3,7 +3,7 @@
     <div class="card-body">
         <h4 class="card-title mb-4">Đăng nhập</h4>
 
-        <form action="<?= $SITE_URL ?>/tai-khoan/quen-mk.php" method="POST">
+        <form action="<?= $SITE_URL ?>/tai-khoan/quen-mk.php" method="POST" id="form_quen_mk">
 
             <div class="form-group">
                 <label for="username" class="form-label">Tài khoản(tên đăng nhập)</label>
@@ -15,10 +15,11 @@
                 <input name="email" class="form-control" id="email" placeholder="Username" type="text">
             </div> <!-- form-group// -->
 
-            <i class=" text-danger"><?= isset($MESSAGE) ? $MESSAGE : "" ?></i>
+            <i class=" text-danger"><?= (isset($MESSAGE) && (strlen($MESSAGE) > 0)) ? $MESSAGE : "" ?></i>
+
 
             <div class="form-group">
-                <button type="submit" name="btn_forgot_pass" class="btn btn-primary btn-block"> Đăng nhập </button>
+                <button type="submit" name="btn_forgot_pass" class="btn btn-primary btn-block"> Lấy mật khẩu </button>
             </div> <!-- form-group// -->
         </form>
 

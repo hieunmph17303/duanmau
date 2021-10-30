@@ -4,7 +4,6 @@
     </div>
     <div class="box box-primary">
         <div class="box-body">
-            <input type="button" class="btn btn-danger mb-1" value="Xóa các mục đã chọn">
             <table width="100%" class="table table-hover table-bordered text-center">
                 <thead class="thead-dark">
                     <tr>
@@ -12,6 +11,7 @@
                         <th>Số bình luận</th>
                         <th>Cũ nhất</th>
                         <th>Mới nhất</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,7 +28,7 @@
                         <td><?= $moi_nhat ?></td>
                         <td class="text-end">
                             <a href="../binh-luan/index.php?ma_hh=<?= $ma_hh ?>"
-                                class="btn btn-outline-info btn-rounded">Chi tiết<i
+                                class="btn btn-outline-info btn-rounded">Chi tiết <i
                                     class="fas fa-info-circle"></i></i></a>
                         </td>
                     </tr>
