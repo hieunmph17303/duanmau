@@ -198,6 +198,7 @@ $(document).ready(function () {
             ma_kh: {
                 required: true,
                 minlength: 6,
+                remote: 'check.php',
             },
             ho_ten: {
                 required: true,
@@ -206,7 +207,7 @@ $(document).ready(function () {
             email: {
                 required: true,
                 email: true,
-                // remote: "check_user.php?act=update&ma_kh=" + ma_kh,
+                remote: 'check.php',
             },
             mat_khau: {
                 required: true,
@@ -222,6 +223,7 @@ $(document).ready(function () {
             ma_kh: {
                 required: 'Vui lòng điền mã kh',
                 minlength: 'Hãy nhập tối thiểu 6 ký tự',
+                remote: 'Mã kh đã tồn tại',
             },
             ho_ten: {
                 required: 'Vui lòng điền họ tên',
@@ -230,7 +232,7 @@ $(document).ready(function () {
             email: {
                 required: 'Vui lòng điền email',
                 email: 'Email không hợp lệ ',
-                // remote: "Email đã tồn tại",
+                remote: 'Email đã tồn tại',
             },
             mat_khau: {
                 required: 'Vui lòng điền mật khẩu',
@@ -254,7 +256,7 @@ $(document).ready(function () {
             email: {
                 required: true,
                 email: true,
-                // remote: "check_user.php?act=update&ma_kh=" + ma_kh,
+                // remote: 'check_user.php?act=update&ma_kh=' + ma_kh,
             },
             mat_khau: {
                 required: true,
