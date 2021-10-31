@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-header text-center bg-dark text-white text-uppercase">Thêm mới khách hàng</div>
             <div class="card-body">
-                <form action="index.php" method="POST" enctype="multipart/form-data">
+                <form action="index.php" method="POST" enctype="multipart/form-data" id="admin_add_kh">
                     <div class="row">
                         <div class="form-group col-sm-6">
                             <label for="ma_kh" class="form-label">Mã khách hàng (tên đăng nhập)</label>
@@ -21,7 +21,7 @@
                         </div>
                         <div class="form-group col-sm-6">
                             <label for="mat_khau" class="form-label">Xác nhận mật khẩu</label>
-                            <input type="password" name="mat_khau2" id="mat_khau" class="form-control" required>
+                            <input type="password" name="mat_khau2" class="form-control" required>
                         </div>
                     </div>
                     <div class="row">

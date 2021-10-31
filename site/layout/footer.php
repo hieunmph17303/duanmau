@@ -41,7 +41,7 @@
         </div>
         <div class="col-12 copyright mt-3">
             <p class="float-left">
-                <a href="#">Về đầu trang</a>
+                <a class="btn btn-info" href="<?= $ROOT_URL ?>">Về đầu trang</a>
             </p>
             <p class="text-right text-muted">Dự án mẫu của <i class="fa fa-heart red"></i>
                 <a href="https://www.facebook.com/MHFPL/"><i>hieunmph17303</i></a>

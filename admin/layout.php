@@ -53,20 +53,19 @@ check_login();
                             <div class="nav-dropdown">
                                 <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-user"></i> <span>Hiếu Minh</span> <i style="font-size: .8em;"
-                                        class="fas fa-caret-down"></i>
+                                    <?php
+                                    if (isset($_SESSION['user']) && $_SESSION['user']['hinh'] != "") { ?>
+                                    <img src="<?= $UPLOAD_URL . "/users/" . $_SESSION['user']['hinh'] ?>" width="30"
+                                        height="30" class="mb-2 object-fit-cover rounded-circle" alt="">
+                                    <?php } else { ?>
+                                    <i class="fa fa-user primary-color"></i>
+                                    <?php }  ?>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                     <ul class="nav-list">
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i>
-                                                Profile</a></li>
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-envelope"></i>
-                                                Messages</a></li>
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
-                                        </li>
-                                        <div class="dropdown-divider"></div>
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>
-                                                Logout</a></li>
+                                        <li><a href="<?= $SITE_URL . '/tai-khoan/dang-nhap.php?btn_logout' ?>"
+                                                class="dropdown-item"><i class="fas fa-sign-out-alt"></i>
+                                                Đăng xuất</a></li>
                                     </ul>
                                 </div>
                             </div>

@@ -1,163 +1,77 @@
+<?php
+$totalAll = 0;
+
+?>
+<h5 class="alert-info mb-3 pt-3 pb-3 pl-sm-4 shadow-sm text-center" style="margin-top: 5rem; margin-bottom: 0rem">Giỏ
+    hàng</h5>
+
 <div class="container">
 
-    <div class="row">
-        <main class="col-md-9">
-            <div class="card">
+    <?php
+    if (isset($_SESSION['cart'])) {
+    ?>
+    <div class="row m-1 pb-5">
+        <table class="table table-responsive-md">
+            <thead class="thead text-center">
+                <tr>
+                    <th>Mã SP</th>
+                    <th>Tên SP</th>
+                    <th>Đơn giá</th>
+                    <th>Giảm giá</th>
+                    <th style="width:6rem">Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody class="text-center" id="giohang">
 
-                <table class="table table-borderless table-shopping-cart">
-                    <thead class="text-muted">
-                        <tr class="small text-uppercase">
-                            <th scope="col">Product</th>
-                            <th scope="col" width="120">Quantity</th>
-                            <th scope="col" width="120">Price</th>
-                            <th scope="col" class="text-right" width="200"> </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <figure class="itemside">
-                                    <div class="aside"><img src="images/items/1.jpg" class="img-sm"></div>
-                                    <figcaption class="info">
-                                        <a href="#" class="title text-dark">Some name of item goes here nice</a>
-                                        <p class="text-muted small">Size: XL, Color: blue, <br> Brand: Gucci</p>
-                                    </figcaption>
-                                </figure>
-                            </td>
-                            <td>
-                                <select class="form-control">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                </select>
-                            </td>
-                            <td>
-                                <div class="price-wrap">
-                                    <var class="price">$1156.00</var>
-                                    <small class="text-muted"> $315.20 each </small>
-                                </div> <!-- price-wrap .// -->
-                            </td>
-                            <td class="text-right">
-                                <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light"
-                                    data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
-                                <a href="" class="btn btn-light"> Remove</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <figure class="itemside">
-                                    <div class="aside"><img src="images/items/2.jpg" class="img-sm"></div>
-                                    <figcaption class="info">
-                                        <a href="#" class="title text-dark">Product name goes here nice</a>
-                                        <p class="text-muted small">Size: XL, Color: blue, <br> Brand: Gucci</p>
-                                    </figcaption>
-                                </figure>
-                            </td>
-                            <td>
-                                <select class="form-control">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                </select>
-                            </td>
-                            <td>
-                                <div class="price-wrap">
-                                    <var class="price">$149.97</var>
-                                    <small class="text-muted"> $75.00 each </small>
-                                </div> <!-- price-wrap .// -->
-                            </td>
-                            <td class="text-right">
-                                <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light"
-                                    data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
-                                <a href="" class="btn btn-light btn-round"> Remove</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <figure class="itemside">
-                                    <div class="aside"><img src="images/items/3.jpg" class="img-sm"></div>
-                                    <figcaption class="info">
-                                        <a href="#" class="title text-dark">Another name of some product goes
-                                            just here as a demo text </a>
-                                        <p class="small text-muted">Size: XL, Color: blue, Brand: Tissot</p>
-                                    </figcaption>
-                                </figure>
-                            </td>
-                            <td>
-                                <select class="form-control">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
-                            </td>
-                            <td>
-                                <div class="price-wrap">
-                                    <var class="price">$98.00</var>
-                                    <small class="text-muted"> $578.00 each</small>
-                                </div> <!-- price-wrap .// -->
-                            </td>
-                            <td class="text-right">
-                                <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light"
-                                    data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
-                                <a href="" class="btn btn-light btn-round"> Remove</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="card-body border-top">
-                    <a href="#" class="btn btn-primary float-md-right"> Make Purchase <i
-                            class="fa fa-chevron-right"></i> </a>
-                    <a href="#" class="btn btn-light"> <i class="fa fa-chevron-left"></i> Continue shopping </a>
-                </div>
-            </div> <!-- card.// -->
-
-            <div class="alert alert-success mt-3">
-                <p class="icontext"><i class="icon text-success fa fa-truck"></i> Free Delivery within 1-2 weeks
-                </p>
-            </div>
-
-        </main> <!-- col.// -->
-        <aside class="col-md-3">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <form>
-                        <div class="form-group">
-                            <label>Have coupon?</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="" placeholder="Coupon code">
-                                <span class="input-group-append">
-                                    <button class="btn btn-primary">Apply</button>
-                                </span>
-                            </div>
-                        </div>
-                    </form>
-                </div> <!-- card-body.// -->
-            </div> <!-- card .// -->
-            <div class="card">
-                <div class="card-body">
-                    <dl class="dlist-align">
-                        <dt>Total price:</dt>
-                        <dd class="text-right">USD 568</dd>
-                    </dl>
-                    <dl class="dlist-align">
-                        <dt>Discount:</dt>
-                        <dd class="text-right">USD 658</dd>
-                    </dl>
-                    <dl class="dlist-align">
-                        <dt>Total:</dt>
-                        <dd class="text-right  h5"><strong>$1,650</strong></dd>
-                    </dl>
-                    <hr>
-                    <p class="text-center mb-3">
-                        <img src="images/misc/payments.png" height="26">
-                    </p>
-
-                </div> <!-- card-body.// -->
-            </div> <!-- card .// -->
-        </aside> <!-- col.// -->
+                <?php foreach ($_SESSION['cart'] as $index => $item) : ?>
+                <tr>
+                    <td><?= $index ?></td>
+                    <td><?= $item['ten_hh'] ?></td>
+                    <td><span><?= number_format($item['don_gia'], 0, ".") ?></span> đ <input type="hidden"
+                            class="don_gia_an" name="don_gia" value="<?= $item['don_gia'] ?>"></td>
+                    <td><span><?= number_format($item['giam_gia'], 0, ".") ?></span> đ <input type="hidden"
+                            class="giam_gia_an" name="giam_gia" value="<?= $item['giam_gia'] ?>"></td>
+                    <td class="pt-1 m-auto">
+                        <form action="delete_cart.php?act=update_sl" method="post">
+                            <input type="number" class="form-control sl" name="update_sl" onchange="this.form.submit()"
+                                value="<?= $item['sl'] ?>" min="1" max="10">
+                            <input type="hidden" class="form-control" name="ma_hh" value="<?= $index ?>">
+                        </form>
+                    </td>
+                    <td> <span class="thanh_tien_sp"></span> đ</td>
+                    <td class="pt-1 m-auto">
+                        <a onclick="return confirm('Bạn chắc chắn muốn xóa k??');"
+                            href="<?= $SITE_URL . "/cart/delete-cart.php?act=delete&id=" . $index ?>"
+                            class="btn btn-outline-danger"> <i class="fas fa-trash-alt "></i></a>
+                    </td>
+                </tr>
+                <?php endforeach ?>
+            </tbody>
+            <tfoot id="tongdonhang">
+                <tr class="text-center">
+                    <th colspan="5">Tổng thành tiền: </th>
+                    <td class="  text-danger font-weight-bold"><span id="tong_thanh_tien"></span> đ</td>
+                    <td></td>
+                </tr>
+                <tr class="text-right">
+                    <th colspan="7">
+                        <a href="<?= $SITE_URL . "/cart/list-cart.php?form_invoice" ?>" class="btn btn-success">Thanh
+                            toán</a>
+                        <a onclick="return confirm('Bạn chắc chắn muốn xóa tất cả k??');"
+                            href="<?= $SITE_URL . "/cart/delete-cart.php?act=deleteAll" ?>" class="btn btn-danger">Xóa
+                            tất
+                            cả</a>
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
     </div>
-
-</div> <!-- container .//  -->
+    <?php } else { ?>
+    <div class="row  m-1 pb-5">
+        <h6 class="col-12">Không tồn tại sản phẩm nào trong giỏ hàng </h6>
+        <a class="btn btn-outline-dark col-12" href="<?= $ROOT_URL ?>"> Về trang chủ</a>
+    </div>
+    <?php } ?>
+</div>

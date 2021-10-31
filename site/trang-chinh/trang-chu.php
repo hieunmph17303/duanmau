@@ -13,8 +13,8 @@
 
 </section>
 
-<!-- Sản phẩm mởi nhất -->
-<section class="last-product">
+<!-- Sản phẩm đặc biệt-->
+<section class="special-product">
 
     <?php require "../trang-chinh/dac-biet.php"; ?>
     <?php require "../trang-chinh/top10.php" ?>

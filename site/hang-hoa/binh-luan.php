@@ -1,6 +1,6 @@
 <div class="col-12" id="reviews">
     <div class="card border-light mb-3">
-        <div class="card-header bg-warning text-white text-uppercase"><i class="fa fa-comment"></i> Đánh giá
+        <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-comment"></i> Đánh giá
         </div>
         <div class="card-body">
             <?php foreach ($binh_luan_list as $bl) : ?>

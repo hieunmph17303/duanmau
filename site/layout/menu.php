@@ -49,9 +49,17 @@
             <div class="widgets-wrap float-md-right ml-4">
                 <!-- Cart -->
                 <div class="widget-header  mr-3">
-                    <a href="cart.html" class="icon icon-sm rounded-circle border"><i
+                    <a href="<?= $SITE_URL . "/cart/list-cart.php" ?>" class="icon icon-sm rounded-circle border"><i
                             class="fa fa-shopping-cart primary-color"></i></a>
-                    <span class="badge badge-pill badge-danger notify">0</span>
+                    <span class="badge badge-pill badge-danger notify">
+                        <?php
+                        if (isset($_SESSION['total_cart'])) {
+                            echo $_SESSION['total_cart'];
+                        } else {
+                            echo 0;
+                        }
+                        ?>
+                    </span>
                 </div>
                 <!-- User -->
                 <div class="dropdown widget-header icontext">

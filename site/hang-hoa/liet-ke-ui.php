@@ -48,10 +48,10 @@
                          </div>
                          <a class="product-thumb" href="<?= $SITE_URL . '/hang-hoa/chi-tiet.php?ma_hh=' . $ma_hh ?>"
                              data-abc="true">
-                             <img class="card-img-top product-img" src="<?= $UPLOAD_URL . '/products/' . $hinh ?>"
-                                 alt="Ảnh sản phẩm">
+                             <img class="card-img-top product-img object-fit-contain"
+                                 src="<?= $UPLOAD_URL . '/products/' . $hinh ?>" alt="Ảnh sản phẩm">
                          </a>
-                         <div class="card-body p-0 pt-3">
+                         <div class="card-body p-0 pt-3 px-2">
                              <h3 class="product-title mh-60">
                                  <a href="<?= $SITE_URL . '/hang-hoa/chi-tiet.php?ma_hh=' . $ma_hh ?>">
                                      <?= $ten_hh ?>
@@ -66,7 +66,7 @@
                              </div>
                              <div class="col m-2">
                                  <a href="<?= $SITE_URL . "/cart/add-cart.php?id=" . $item['ma_hh'] ?>"
-                                     class="btn btn-outline-primary btn-sm">Add to cart</a>
+                                     class=" btn btn-outline-primary btn-sm">Add to cart</a>
                              </div>
                          </div>
                      </div>

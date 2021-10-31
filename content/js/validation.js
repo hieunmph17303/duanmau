@@ -191,7 +191,58 @@ $(document).ready(function () {
             },
         },
     });
+    //============================Form admin add tài khoản khách hàng================//
 
+    $('#admin_add_kh').validate({
+        rules: {
+            ma_kh: {
+                required: true,
+                minlength: 6,
+            },
+            ho_ten: {
+                required: true,
+                minlength: 6,
+            },
+            email: {
+                required: true,
+                email: true,
+                // remote: "check_user.php?act=update&ma_kh=" + ma_kh,
+            },
+            mat_khau: {
+                required: true,
+                minlength: 6,
+            },
+            mat_khau2: {
+                required: true,
+                minlength: 6,
+                equalTo: '#mat_khau',
+            },
+        },
+        messages: {
+            ma_kh: {
+                required: 'Vui lòng điền mã kh',
+                minlength: 'Hãy nhập tối thiểu 6 ký tự',
+            },
+            ho_ten: {
+                required: 'Vui lòng điền họ tên',
+                minlength: 'Hãy nhập tối thiểu 6 ký tự',
+            },
+            email: {
+                required: 'Vui lòng điền email',
+                email: 'Email không hợp lệ ',
+                // remote: "Email đã tồn tại",
+            },
+            mat_khau: {
+                required: 'Vui lòng điền mật khẩu',
+                minlength: 'Hãy nhập ít nhất 6 ký tự',
+            },
+            mat_khau2: {
+                required: 'Vui lòng điền mật khẩu',
+                equalTo: 'Mật khẩu không trùng nhau',
+                minlength: 'Hãy nhập ít nhất 6 ký tự',
+            },
+        },
+    });
     //============================Form admin cập nhật tài khoản khách hàng================//
 
     $('#admin_update_kh').validate({

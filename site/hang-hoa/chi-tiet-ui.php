@@ -104,7 +104,7 @@
         <!-- Description -->
         <div class="col-12">
             <div class="card border-light mb-3">
-                <div class="card-header bg-info text-white text-uppercase"><i class="fa fa-align-justify"></i>
+                <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-align-justify"></i>
                     Mô tả sản phẩm
                 </div>
                 <div class="card-body">

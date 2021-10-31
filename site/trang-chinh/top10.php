@@ -23,10 +23,10 @@
                                 </div>
                                 <a class="product-thumb"
                                     href="<?= $SITE_URL . '/hang-hoa/chi-tiet.php?ma_hh=' . $ma_hh ?>" data-abc="true">
-                                    <img class="card-img-top product-img"
+                                    <img class="card-img-top product-img object-fit-contain"
                                         src="<?= $UPLOAD_URL . '/products/' . $hinh ?>" alt="Ảnh sản phẩm">
                                 </a>
-                                <div class="card-body p-0 pt-3">
+                                <div class="card-body p-0 pt-2 px-2">
                                     <h3 class="product-title mh-60">
                                         <a href="<?= $SITE_URL . '/hang-hoa/chi-tiet.php?ma_hh=' . $ma_hh ?>">
                                             <?= $ten_hh ?>

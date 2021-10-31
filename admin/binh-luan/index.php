@@ -1,10 +1,10 @@
 <?php
-check_login();
 
 require_once "../../dao/pdo.php";
 require_once "../../dao/binh-luan.php";
 require_once "../../dao/thong-ke.php";
 require "../../global.php";
+check_login();
 
 extract($_REQUEST);
 if (exist_param("ma_hh")) {
