@@ -12,9 +12,10 @@ if (exist_param("gioi-thieu")) {
 
     $_SESSION['name_page'] = 'san_pham';
     header("location: $SITE_URL/hang-hoa/liet-ke.php");
-    // 
 } else if (exist_param("bai-viet")) {
+
     $_SESSION['name_page'] = 'bai_viet';
+
     $VIEW_NAME = "trang-chinh/bai-viet.php";
     //
 } else if (exist_param("hoi-dap")) {

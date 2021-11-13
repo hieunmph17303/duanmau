@@ -13,8 +13,7 @@
         </li>
         <!-- Danh mục -->
         <li>
-            <a href="#categories" data-bs-toggle="collapse" aria-expanded="false"
-                class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Danh mục
+            <a href="#categories" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Danh mục
                 <i class="fas fa-angle-right float-xl-right"></i>
             </a>
             <ul class="collapse list-unstyled" id="categories">
@@ -30,8 +29,7 @@
         </li>
         <!-- Sản phẩm -->
         <li>
-            <a href="#products" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i
-                    class="fas fa-table"></i>Sản phẩm
+            <a href="#products" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-table"></i>Sản phẩm
                 <i class="fas fa-angle-right float-xl-right"></i>
             </a>
             <ul class="collapse list-unstyled" id="products">

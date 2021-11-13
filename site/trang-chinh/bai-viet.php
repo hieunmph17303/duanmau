@@ -39,13 +39,11 @@
                 <div class="card bg-light">
                     <div class="card-body">
                         <!-- Comment form-->
-                        <form class="mb-4"><textarea class="form-control" rows="3"
-                                placeholder="Join the discussion and leave a comment!"></textarea></form>
+                        <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
                         <!-- Comment with nested comments-->
                         <div class="d-flex mb-4">
                             <!-- Parent comment-->
-                            <div class="flex-shrink-0"><img class="rounded-circle"
-                                    src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
                             <div class="ms-3">
                                 <div class="fw-bold">Commenter Name</div>
                                 If you're going to lead a space frontier, it has to be government; it'll never be
@@ -53,8 +51,7 @@
                                 has unquantified risks.
                                 <!-- Child comment 1-->
                                 <div class="d-flex mt-4">
-                                    <div class="flex-shrink-0"><img class="rounded-circle"
-                                            src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
                                     <div class="ms-3">
                                         <div class="fw-bold">Commenter Name</div>
                                         And under those conditions, you cannot establish a capital-market evaluation of
@@ -63,8 +60,7 @@
                                 </div>
                                 <!-- Child comment 2-->
                                 <div class="d-flex mt-4">
-                                    <div class="flex-shrink-0"><img class="rounded-circle"
-                                            src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
                                     <div class="ms-3">
                                         <div class="fw-bold">Commenter Name</div>
                                         When you put money directly to a problem, it makes a good headline.
@@ -74,8 +70,7 @@
                         </div>
                         <!-- Single comment-->
                         <div class="d-flex">
-                            <div class="flex-shrink-0"><img class="rounded-circle"
-                                    src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
                             <div class="ms-3">
                                 <div class="fw-bold">Commenter Name</div>
                                 When I look at the universe and all the ways the universe wants to kill us, I find it
@@ -93,8 +88,7 @@
                 <div class="card-header">Search</div>
                 <div class="card-body">
                     <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Enter search term..."
-                            aria-label="Enter search term..." aria-describedby="button-search" />
+                        <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
                         <button class="btn btn-primary" id="button-search" type="button">Go!</button>
                     </div>
                 </div>
@@ -106,7 +100,9 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <ul class="list-unstyled mb-0">
-                                <li><a href="#!">Web Design</a></li>
+                                <li>
+                                    <a href="#!">Web Design</a>
+                                </li>
                                 <li><a href="#!">HTML</a></li>
                                 <li><a href="#!">Freebies</a></li>
                             </ul>
